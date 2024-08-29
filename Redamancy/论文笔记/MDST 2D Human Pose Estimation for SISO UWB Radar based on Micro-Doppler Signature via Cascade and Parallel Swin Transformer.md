@@ -546,3 +546,90 @@ else:
 ### 总结
 
 去除雷达信号中的杂波和噪声通常需要结合多种方法，根据具体应用场景的不同特征选择合适的技术。例如，在检测移动目标时，可能会使用动目标显示（MTI）滤波器和多普勒滤波；而对于信号的去噪处理，则可能选择维纳滤波或卡尔曼滤波，以保持信号的完整性和准确性。
+***
+在学术研究和深度学习过程中，数据预处理后的保存位置通常遵循以下几种常见的文件夹命名和组织方式：
+
+### 常见的文件夹命名方式
+
+1. **`processed` 或 `preprocessed` 文件夹**：
+   - 这是最常见的命名方式之一。预处理后的数据通常会被保存到一个名为 `processed` 或 `preprocessed` 的文件夹中，以表明数据已经经过预处理步骤，并且可以直接用于模型训练或进一步分析。
+   - 示例：`data/processed/` 或 `data/preprocessed/`
+
+2. **`train`、`test` 和 `validation` 文件夹**：
+   - 根据数据的用途进行分类，预处理后的数据可能被分为训练集、测试集和验证集，并分别存储在名为 `train`、`test` 和 `validation` 的文件夹中。这种命名方式特别适用于监督学习任务。
+   - 示例：`data/train/`, `data/test/`, `data/validation/`
+
+3. **`features` 或 `extracted_features` 文件夹**：
+   - 如果数据预处理的结果是提取了特征（如通过特征工程或特征选择），那么这些特征数据通常会被保存到 `features` 或 `extracted_features` 文件夹中。
+   - 示例：`data/features/` 或 `data/extracted_features/`
+
+4. **`normalized`、`standardized` 文件夹**：
+   - 如果预处理过程包括归一化或标准化等操作，那么数据可以存储在一个命名为 `normalized` 或 `standardized` 的文件夹中，以反映其具体的预处理步骤。
+   - 示例：`data/normalized/`, `data/standardized/`
+
+5. **`intermediate` 或 `temp` 文件夹**：
+   - 在一些深度学习项目中，预处理数据的中间结果或临时文件可能会被存储在一个名为 `intermediate` 或 `temp` 的文件夹中。这些文件夹通常用于存储在最终结果生成之前的中间状态数据。
+   - 示例：`data/intermediate/`, `data/temp/`
+***
+
+
+### Python代码：直达波抑制和自适应滤波
+
+```python
+import numpy as np
+from scipy.signal import butter, filtfilt
+
+# 定义Butterworth滤波器
+def butter_lowpass(cutoff, fs, order=5):
+    nyq = 0.5 * fs
+    normal_cutoff = cutoff / nyq
+    b, a = butter(order, normal_cutoff, btype='low', analog=False)
+    return b, a
+
+# 应用低通滤波器
+def lowpass_filter(data, cutoff, fs, order=5):
+    b, a = butter_lowpass(cutoff, fs, order=order)
+    y = filtfilt(b, a, data)  # 使用filtfilt实现零相位滤波，减少边缘效应
+    return y
+
+# 加载数据
+file_path = './data/__20_walk_1.txt'  # 替换为您的文件路径
+data = []
+
+with open(file_path, 'r') as file:
+    for line in file:
+        if line.startswith('x:'):
+            x = float(line.split('x:')[1].strip())
+            data.append(x)
+
+# 转换为NumPy数组
+data = np.array(data)
+
+# 数据归一化
+data = (data - np.mean(data)) / np.std(data)
+
+# 设定滤波器参数
+# 调整滤波器参数
+cutoff = 10.0  # 较高的截止频率 (Hz) 以保留更多细节
+fs = 100.0     # 采样率 (Hz)
+order = 4      # 滤波器阶数，可根据需要调整
+
+# 过滤数据
+filtered_data = lowpass_filter(data, cutoff, fs, order)
+
+# 反归一化（如果需要）
+filtered_data = filtered_data * np.std(data) + np.mean(data)
+
+# 输出结果
+print("原始数据: ", data[:10])         # 显示前10个原始数据点
+print("滤波后数据: ", filtered_data[:10])  # 显示前10个滤波后数据点
+
+```
+
+### 代码解释
+
+1. **数据加载**：从指定的本地文件路径加载数据，将其解析为浮点数。
+2. **Butterworth滤波器**：使用`butter`函数定义低通滤波器参数，包括截止频率和滤波器阶数。
+3. **低通滤波**：应用低通滤波器以消除直达波和高频噪声。
+4. **结果输出**：打印原始数据和滤波后的数据以比较滤波效果。
+***
