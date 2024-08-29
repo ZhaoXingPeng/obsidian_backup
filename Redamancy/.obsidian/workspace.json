@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
+                "file": "Human Pose Estimation (人体姿态估计)/热图方法.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
+                "file": "Human Pose Estimation (人体姿态估计)/热图方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
+                "file": "Human Pose Estimation (人体姿态估计)/热图方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md"
+                "file": "Human Pose Estimation (人体姿态估计)/热图方法.md"
               }
             }
           }
@@ -150,8 +150,8 @@
   },
   "active": "0c84969317561357",
   "lastOpenFiles": [
-    "Pasted image 20240828200410.png",
     "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
+    "Pasted image 20240828200410.png",
     "论文笔记/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.md",
     "未命名.md",
     "论文笔记",
