@@ -94,4 +94,145 @@ Recurrent Language Models（循环语言模型）和Encoder-Decoder架构在处�
 3. **信息捕获能力**：
    - 循环语言模型通常只能捕捉输入序列中的单向依赖（通常是从左到右）。
    - 编码器-解码器架构（特别是带有双向RNN的编码器）可以更好地捕捉输入序列中的全局信息，甚至可以使用注意力机制（Attention Mechanism）来进一步增强其信息捕获能力。
-测试一下
+***
+以下是一个使用 PyTorch 构建和训练简单 RNN 模型来预测股价的典型代码示例。这个代码框架涵盖了数据准备、模型构建、训练和预测步骤。
+
+### 1. **导入所需库**
+
+```python
+import torch
+import torch.nn as nn
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+```
+
+### 2. **加载和准备数据**
+
+假设我们有一个包含股价的 CSV 文件，例如 `stock_prices.csv`，其中一列是日期，另一列是收盘价。
+
+```python
+# 加载数据
+data = pd.read_csv('stock_prices.csv')
+data = data[['Close']]  # 选择收盘价格列
+
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data['Close'] = scaler.fit_transform(data['Close'].values.reshape(-1, 1))
+
+# 转换为序列数据
+def create_sequences(data, seq_length):
+    sequences = []
+    labels = []
+    for i in range(len(data) - seq_length):
+        sequences.append(data[i:i + seq_length])
+        labels.append(data[i + seq_length])
+    return np.array(sequences), np.array(labels)
+
+seq_length = 10  # 序列长度
+sequences, labels = create_sequences(data['Close'].values, seq_length)
+
+# 划分训练集和测试集
+train_size = int(len(sequences) * 0.8)
+train_sequences, test_sequences = sequences[:train_size], sequences[train_size:]
+train_labels, test_labels = labels[:train_size], labels[train_size:]
+
+# 转换为 PyTorch 张量
+train_sequences = torch.FloatTensor(train_sequences).unsqueeze(-1)
+train_labels = torch.FloatTensor(train_labels)
+test_sequences = torch.FloatTensor(test_sequences).unsqueeze(-1)
+test_labels = torch.FloatTensor(test_labels)
+```
+
+### 3. **构建 RNN 模型**
+
+```python
+class StockPriceRNN(nn.Module):
+    def __init__(self, input_size=1, hidden_size=50, output_size=1, num_layers=2):
+        super(StockPriceRNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        self.rnn = nn.RNN(input_size, hidden_size, num_layers, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+        out, _ = self.rnn(x, h0)
+        out = self.fc(out[:, -1, :])
+        return out
+
+# 初始化模型
+model = StockPriceRNN()
+criterion = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+```
+
+### 4. **训练模型**
+
+```python
+# 训练参数
+num_epochs = 100
+model.train()
+
+for epoch in range(num_epochs):
+    optimizer.zero_grad()  # 清除上一步的梯度
+    outputs = model(train_sequences)  # 前向传播
+    loss = criterion(outputs, train_labels)  # 计算损失
+    loss.backward()  # 反向传播
+    optimizer.step()  # 更新权重
+
+    if (epoch + 1) % 10 == 0:
+        print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
+```
+
+### 5. **评估模型**
+
+```python
+model.eval()
+with torch.no_grad():
+    train_pred = model(train_sequences)
+    test_pred = model(test_sequences)
+
+# 反归一化预测结果
+train_pred = scaler.inverse_transform(train_pred.detach().numpy())
+train_labels = scaler.inverse_transform(train_labels.detach().numpy().reshape(-1, 1))
+test_pred = scaler.inverse_transform(test_pred.detach().numpy())
+test_labels = scaler.inverse_transform(test_labels.detach().numpy().reshape(-1, 1))
+
+# 绘制结果
+plt.figure(figsize=(12, 6))
+plt.plot(train_labels, label='Train Actual')
+plt.plot(train_pred, label='Train Prediction')
+plt.plot(np.arange(len(train_labels), len(train_labels) + len(test_labels)), test_labels, label='Test Actual')
+plt.plot(np.arange(len(train_labels), len(train_labels) + len(test_labels)), test_pred, label='Test Prediction')
+plt.legend()
+plt.show()
+```
+
+### 6. **预测新数据**
+
+可以使用训练好的模型来预测新的股价数据：
+
+```python
+def predict_future(model, data, steps):
+    model.eval()
+    inputs = torch.FloatTensor(data).unsqueeze(0).unsqueeze(-1)  # 调整输入形状
+    predictions = []
+    with torch.no_grad():
+        for _ in range(steps):
+            pred = model(inputs)
+            predictions.append(pred.item())
+            inputs = torch.cat((inputs[:, 1:, :], pred.unsqueeze(0).unsqueeze(-1)), dim=1)  # 更新输入数据
+    return scaler.inverse_transform(np.array(predictions).reshape(-1, 1))
+
+# 假设我们从测试集最后一个序列开始预测未来10个时间步
+future_steps = 10
+predicted_future = predict_future(model, test_sequences[-1].numpy(), future_steps)
+print(predicted_future)
+```
+
+### 总结
+
+这段代码展示了如何使用PyTorch实现一个简单的RNN模型来预测股价。该模型可以用于处理各种时间序列预测任务，并可以根据需求进一步优化和调整。
