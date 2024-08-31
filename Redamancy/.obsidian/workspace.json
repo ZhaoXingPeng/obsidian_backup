@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6f185f3b8a103dd3",
+        "id": "235b10e4ed8b1235",
         "type": "tabs",
         "children": [
           {
-            "id": "0c84969317561357",
+            "id": "216aaeee596416c9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,21 +140,23 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "bfd1fc0becd11958",
+  "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "画板/神经网络.canvas",
+    "未命名.md",
+    "未命名",
+    "画板",
     "论文笔记/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.md",
+    "Human Pose Estimation (人体姿态估计)/热图方法.md",
     "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
     "论文笔记/Attention Is All You Need.md",
     "图片/Pasted image 20240828102231.png",
-    "Human Pose Estimation (人体姿态估计)/热图方法.md",
     "图片/Pasted image 20240831211613.png",
     "图片",
     "图片/Pasted image 20240829194347.png",
     "图片/Pasted image 20240829142514.png",
     "图片/Pasted image 20240828200410.png",
-    "未命名.md",
     "论文笔记",
-    "未命名.canvas",
     "Human Pose Estimation (人体姿态估计)",
     "测的是/你爱哦.md",
     "测的是",

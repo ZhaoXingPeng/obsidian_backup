@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"9fe72ffcdd7eb7fd","x":-160,"y":140,"width":250,"height":60,"type":"text","text":"CNN"},
+		{"id":"21aedf9da3e4a547","x":-162,"y":-53,"width":250,"height":60,"type":"text","text":"RNN"},
+		{"id":"e6ddd78a7610f1e0","x":-161,"y":-232,"width":250,"height":60,"type":"text","text":"Transformer"}
+	],
+	"edges":[
+		{"id":"43ec495c4f666e08","fromNode":"9fe72ffcdd7eb7fd","fromSide":"top","toNode":"21aedf9da3e4a547","toSide":"bottom"},
+		{"id":"a73ac4149c279f92","fromNode":"21aedf9da3e4a547","fromSide":"top","toNode":"e6ddd78a7610f1e0","toSide":"bottom"}
+	]
+}
