@@ -1,3 +1,4 @@
+
 主要的序列转换模型（Sequence Transduction Models）基于复杂的递归神经网络（Recurrent Neural Networks, RNN）或卷积神经网络（Convolutional Neural Networks, CNN），并且这些模型包含编码器（Encoder）和解码器（Decoder）结构。
 
 具体解释如下：
@@ -232,7 +233,4 @@ future_steps = 10
 predicted_future = predict_future(model, test_sequences[-1].numpy(), future_steps)
 print(predicted_future)
 ```
-
-### 总结
-
-这段代码展示了如何使用PyTorch实现一个简单的RNN模型来预测股价。该模型可以用于处理各种时间序列预测任务，并可以根据需求进一步优化和调整。
+***
