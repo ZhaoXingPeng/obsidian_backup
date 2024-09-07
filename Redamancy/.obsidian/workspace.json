@@ -15,8 +15,8 @@
               "state": {
                 "file": "画板/SCRP-Radar.canvas",
                 "viewState": {
-                  "x": 627.4562850049394,
-                  "y": 192.98981672098537,
+                  "x": 365.9226277488556,
+                  "y": 428.70684686595365,
                   "zoom": -0.16666666666666663
                 }
               }
@@ -155,6 +155,7 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "图片/Pasted image 20240907212348.png",
     "图片/Pasted image 20240907203450.png",
     "图片/Pasted image 20240907203434.png",
     "图片/Pasted image 20240907203410.png",
