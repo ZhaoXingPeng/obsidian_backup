@@ -2,17 +2,23 @@
 	"nodes":[
 		{"id":"ba0f89f34cac061f","x":-360,"y":-140,"width":340,"height":240,"color":"5","type":"text","text":"# 原始数据\n时间戳 (Timestamp)\n回波信号强度 (Amplitude/Intensity)\n距离 (Range)\n速度 (Velocity, Doppler Shift)\n角度 (Angle or Azimuth)\n......."},
 		{"id":"082f178ea411de6f","x":-160,"y":-340,"width":520,"height":60,"type":"text","text":"[[SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar]]"},
-		{"id":"3317eb1e06e1b56b","x":-360,"y":160,"width":340,"height":440,"color":"5","type":"text","text":"# 快慢时间\n#### 快时间（Fast Time）\n快时间是指雷达在每个脉冲内部对回波信号进行采样的时间。它描述了信号在一个雷达脉冲发射后，接收信号回波的时间过程。快时间主要用于测量**距离**。\n#### 慢时间（Slow Time）\n慢时间是指雷达脉冲发射的脉冲重复周期（Pulse Repetition Interval, PRI）内的时间序列。它描述了每个连续脉冲之间的时间差异。慢时间主要用于测量**速度（或多普勒效应）。"},
-		{"id":"b4a6a83831fccb51","x":-360,"y":660,"width":340,"height":300,"color":"5","type":"text","text":"- **快时间**：雷达“发射-接收”一次信号的时间，决定了能“看到”多远的东西。就像是在“近距离”的瞬间观看，测量物体离雷达有多远。\n- **慢时间**：雷达连续“发射-接收”多次信号的时间间隔，决定了能感知到物体的速度。就像是在“较长时间”观看，观察物体在一段时间内是怎么动的，能“感知”物体是快速接近还是缓慢远离。"},
-		{"id":"414e7ecac27c4683","x":-360,"y":-260,"width":340,"height":120,"color":"5","type":"text","text":"- **引入了新基准HPSUR**\n- **提出了新的坐标表示方法**\n- **引入了Hrnet和LiteHrnet模型**"},
+		{"id":"414e7ecac27c4683","x":-360,"y":-260,"width":340,"height":100,"color":"5","type":"text","text":"- **引入了新基准HPSUR**\n- **提出了新的坐标表示方法**\n- **引入了Hrnet和LiteHrnet模型**"},
 		{"id":"00102c4c6c45b56e","x":0,"y":-134,"width":400,"height":228,"type":"file","file":"图片/Pasted image 20240907164852.png"},
-		{"id":"c267ffe5e95af446","x":0,"y":130,"width":400,"height":130,"type":"text","text":"发射天线被设为坐标系的原点（0, 0, 0）\n接收天线的位置用坐标（u1, v1, w1）\n这里提到的17厘米（X轴方向）和26厘米（Y轴方向）指的是**接收天线相对于发射天线的位移**。\n"}
+		{"id":"3b0ca7261c9626b4","x":0,"y":280,"width":400,"height":360,"color":"5","type":"text","text":"**雷达坐标系（Radar Coordinate System）**：这个坐标系以发射天线的位置为原点（0, 0, 0）。接收天线的位置相对于发射天线的位置通常用（u1, v1, w1）表示。\n**全局坐标系（Global Coordinate System）**：全局坐标系的引入是为了描述**雷达系统和人体目标之间的相对位置关系**。雷达的发射天线和接收天线的位置被定义为（Tx, Ty, Tz）和（Rx, Ry, Rz）\n**目标坐标系（Target Coordinate System）**：目标坐标系用于描述人体目标各部分（如左脚、右手等）的位置和运动。例如（Xo, Yo, Zo）表示左脚骨骼的初始位置。\n"},
+		{"id":"3317eb1e06e1b56b","x":-360,"y":130,"width":340,"height":440,"color":"5","type":"text","text":"# 快慢时间\n#### 快时间（Fast Time）\n快时间是指雷达在每个脉冲内部对回波信号进行采样的时间。它描述了信号在一个雷达脉冲发射后，接收信号回波的时间过程。快时间主要用于测量**距离**。\n#### 慢时间（Slow Time）\n慢时间是指雷达脉冲发射的脉冲重复周期（Pulse Repetition Interval, PRI）内的时间序列。它描述了每个连续脉冲之间的时间差异。慢时间主要用于测量**速度（或多普勒效应）。"},
+		{"id":"b4a6a83831fccb51","x":-360,"y":600,"width":340,"height":300,"color":"5","type":"text","text":"- **快时间**：雷达“发射-接收”一次信号的时间，决定了能“看到”多远的东西。就像是在“近距离”的瞬间观看，测量物体离雷达有多远。\n- **慢时间**：雷达连续“发射-接收”多次信号的时间间隔，决定了能感知到物体的速度。就像是在“较长时间”观看，观察物体在一段时间内是怎么动的，能“感知”物体是快速接近还是缓慢远离。"},
+		{"id":"c267ffe5e95af446","x":0,"y":130,"width":400,"height":130,"color":"5","type":"text","text":"发射天线被设为坐标系的原点（0, 0, 0）\n接收天线的位置用坐标（u1, v1, w1）\n这里提到的17厘米（X轴方向）和26厘米（Y轴方向）指的是**接收天线相对于发射天线的位移**。\n"},
+		{"id":"c2515b18ceb8e47f","x":0,"y":660,"width":400,"height":42,"type":"file","file":"图片/Pasted image 20240907203410.png"},
+		{"id":"f95f07bc989a078f","x":0,"y":720,"width":400,"height":300,"type":"text","text":"![[Pasted image 20240907203450.png]]\n向量的归一化（单位化）过程\n- **α（Azimuth Angle，方位角）**：通常表示在XY平面上与X轴的夹角。它决定了向量在XY平面上的方向。\n- **β（Elevation Angle，仰角）**：通常表示与XY平面的夹角。它决定了向量在Z轴方向上的分量。"},
+		{"id":"75c8c13673ceaabc","x":440,"y":-134,"width":340,"height":228,"type":"text","text":""}
 	],
 	"edges":[
 		{"id":"962b879a96570665","fromNode":"ba0f89f34cac061f","fromSide":"bottom","toNode":"3317eb1e06e1b56b","toSide":"top"},
 		{"id":"9ade892c42186136","fromNode":"3317eb1e06e1b56b","fromSide":"bottom","toNode":"b4a6a83831fccb51","toSide":"top"},
 		{"id":"9a2bc65b3bbfd1a1","fromNode":"082f178ea411de6f","fromSide":"left","toNode":"414e7ecac27c4683","toSide":"top","color":"1"},
 		{"id":"c95c803e7410fc49","fromNode":"ba0f89f34cac061f","fromSide":"right","toNode":"00102c4c6c45b56e","toSide":"left"},
-		{"id":"517b349c1f17275e","fromNode":"00102c4c6c45b56e","fromSide":"bottom","toNode":"c267ffe5e95af446","toSide":"top"}
+		{"id":"517b349c1f17275e","fromNode":"00102c4c6c45b56e","fromSide":"bottom","toNode":"c267ffe5e95af446","toSide":"top"},
+		{"id":"4413f966a668fdf4","fromNode":"c267ffe5e95af446","fromSide":"bottom","toNode":"3b0ca7261c9626b4","toSide":"top"},
+		{"id":"a3029e26274e3b21","fromNode":"c2515b18ceb8e47f","fromSide":"bottom","toNode":"f95f07bc989a078f","toSide":"top"}
 	]
 }
