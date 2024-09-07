@@ -11,8 +11,15 @@
             "id": "216aaeee596416c9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "画板/SCRP-Radar.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 353.9375,
+                  "zoom": 0
+                }
+              }
             }
           }
         ]
@@ -65,7 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "c9aa22c436cc400a",
@@ -81,6 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "画板/SCRP-Radar.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "画板/SCRP-Radar.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +127,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "画板/SCRP-Radar.canvas"
+              }
             }
           }
         ]
@@ -137,12 +148,18 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "obsidian-importer:Open Importer": false
+      "obsidian-importer:Open Importer": false,
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "rs-test-folder-I3CjBnw8pOz7Eoqu2U_Yu",
+    "rs-test-folder-42bb18YXreEcPf6CnCt5n",
+    "图片/Pasted image 20240907164852.png",
     "画板/神经网络.canvas",
+    "画板/SCRP-Radar.canvas",
+    "画板/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.p.canvas",
     "未命名.md",
     "未命名",
     "画板",
