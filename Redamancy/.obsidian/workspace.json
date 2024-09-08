@@ -15,9 +15,9 @@
               "state": {
                 "file": "画板/SCRP-Radar.canvas",
                 "viewState": {
-                  "x": 1109.2548382724628,
-                  "y": 695.3350145553305,
-                  "zoom": 1.1102230246251565e-16
+                  "x": 1156.353594260465,
+                  "y": 595.0245655932974,
+                  "zoom": -0.495039369993354
                 }
               }
             }
@@ -154,6 +154,8 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "图片/Pasted image 20240908163425.png",
+    "画板/SCRP-Radar.canvas",
     "图片/Pasted image 20240908101254.png",
     "图片/Pasted image 20240907212348.png",
     "图片/Pasted image 20240907203450.png",
@@ -163,7 +165,6 @@
     "rs-test-folder-42bb18YXreEcPf6CnCt5n",
     "图片/Pasted image 20240907164852.png",
     "画板/神经网络.canvas",
-    "画板/SCRP-Radar.canvas",
     "画板/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.p.canvas",
     "未命名.md",
     "未命名",
@@ -177,7 +178,6 @@
     "图片",
     "图片/Pasted image 20240829194347.png",
     "图片/Pasted image 20240829142514.png",
-    "图片/Pasted image 20240828200410.png",
     "论文笔记",
     "Human Pose Estimation (人体姿态估计)",
     "测的是/你爱哦.md",
