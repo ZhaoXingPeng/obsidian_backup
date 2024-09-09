@@ -1,6 +1,9 @@
 {
 	"nodes":[
-		{"id":"385e370c150b3816","x":-260,"y":-540,"width":560,"height":100,"color":"4","type":"text","text":"Three-Dimensional Human Pose Estimation from Micro-Doppler\nSignature Based on SISO UWB Radar"}
+		{"id":"385e370c150b3816","type":"text","text":"Three-Dimensional Human Pose Estimation from Micro-Doppler\nSignature Based on SISO UWB Radar","x":-260,"y":-540,"width":560,"height":100,"color":"4"},
+		{"id":"86d41fd801f2fad1","x":-235,"y":-400,"width":510,"height":280,"color":"4","type":"text","text":"- **雷达数据获取微多普勒特征**\n- **由微多普勒谱图通过神经网络卷积获取骨架关键点**\n- **由骨架关键点重建人体三维姿态**\n与二维空间直接HPE不同，这篇论文会构建三维姿态。\n二维姿态估计的局限性：1.**深度信息缺失** 2.**姿态歧义性** 3.缺少视角变化的鲁棒性。\n三维姿态估计的目标是补充二维姿态估计的不足，恢复出人体在三维空间中的关节点位置。它能够提供更精确的空间信息和更加自然的姿态描述。"}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"9ac39aee258f13a3","fromNode":"385e370c150b3816","fromSide":"bottom","toNode":"86d41fd801f2fad1","toSide":"top","color":"4"}
+	]
 }
