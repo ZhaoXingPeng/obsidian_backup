@@ -15,9 +15,9 @@
               "state": {
                 "file": "画板/SCRP-Radar.canvas",
                 "viewState": {
-                  "x": 1938.6489379831332,
-                  "y": -49.682686915586714,
-                  "zoom": 0.1716272966733126
+                  "x": 1043.5095903157505,
+                  "y": 619.0974869296123,
+                  "zoom": -0.8283727033266874
                 }
               }
             }
@@ -154,6 +154,8 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "图片/Pasted image 20240909094454.png",
+    "图片/Pasted image 20240909094429.png",
     "图片/Pasted image 20240908192432.png",
     "图片/Pasted image 20240908163425.png",
     "画板/SCRP-Radar.canvas",
@@ -175,9 +177,7 @@
     "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
     "论文笔记/Attention Is All You Need.md",
     "图片/Pasted image 20240828102231.png",
-    "图片/Pasted image 20240831211613.png",
     "图片",
-    "图片/Pasted image 20240829194347.png",
     "论文笔记",
     "Human Pose Estimation (人体姿态估计)",
     "测的是/你爱哦.md",
