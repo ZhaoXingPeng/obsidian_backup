@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"f0665dfad8ca66d0","type":"text","text":"MDST: 2D Human Pose Estimation for SISO\nUWB Radar based on Micro-Doppler Signature\nvia Cascade and Parallel Swin Transformer","x":-400,"y":-260,"width":420,"height":60,"color":"4"},
+		{"id":"773afe2914dc1b6e","type":"text","text":"1.数据采集和预处理\n2.MD签名的提取与特征嵌入\n3.微多普勒Swin Transformer网络（MDST）的构建\n4.倒特征金字塔网络（IFPN）的集成\n5.解码器模块和姿态估计","x":-420,"y":-180,"width":460,"height":160,"color":"4"},
+		{"id":"425888f4dfeaac90","x":-860,"y":20,"width":400,"height":254,"color":"1","type":"file","file":"图片/Pasted image 20240909201243.png"},
+		{"id":"3f55f939518b09f5","x":-860,"y":300,"width":400,"height":420,"color":"1","type":"text","text":"### **Fast Time 和 Slow Time 的定义以及回波图像的意义**\n- **Fast Time（快速时间）**：指的是雷达信号在一次脉冲周期内的采样时间。因此，Fast Time轴通常用于表示距离，因为传播时间与目标距离直接相关。\n- **Slow Time（慢速时间）**：指的是多个脉冲周期之间的时间采样。因此，Slow Time轴用于观察目标的运动特征，特别是其多普勒效应（速度信息）。\n- **横轴（Slow Time）表示某一个时间点**\n- **纵轴（Fast Time）表示某一个距离**\n- **交叉点表示某一个时间点特定距离的信号强度**"},
+		{"id":"1ed0fd131c5a42d5","x":-440,"y":20,"width":400,"height":252,"color":"1","type":"file","file":"图片/Pasted image 20240909202734.png"},
+		{"id":"b9f430f9ea61bdfc","x":-440,"y":300,"width":400,"height":420,"color":"1","type":"text","text":"1. **横轴（Doppler）**：横轴代表多普勒频率（Doppler Frequency），表示目标的相对速度。频率越高，意味着目标的相对速度越大。多普勒频率的变化反映了目标的运动速度（向雷达靠近或远离）。\n2. **纵轴（Range）**：纵轴表示距离（Range），通过快速时间（Fast Time）上的采样数据经过FFT转换得到。轴上的每一个点表示雷达回波信号在某个特定距离上的强度。\n3. **颜色表示信号强度（Amplitude）**：图中的颜色表示信号的幅度（或能量）。颜色越亮（如黄色和绿色），代表在该距离和多普勒频率组合下的信号强度越高。这通常意味着在该位置上存在显著的目标反射。"},
+		{"id":"025d29f801972ef3","x":-20,"y":20,"width":400,"height":249,"color":"1","type":"file","file":"图片/Pasted image 20240909203400.png"},
+		{"id":"c06368f612b47191","x":-20,"y":300,"width":400,"height":460,"color":"1","type":"text","text":"\n1. **对每个多普勒频率单元（Doppler Bin）进行累加**：在生成多普勒频谱图时，我们沿着距离维度（Range）方向进行累加。也就是说，对于每个多普勒频率单元（Doppler Bin），将该频率下所有距离（Range）的信号强度进行求和。换句话说，对于图中的每一个垂直的多普勒频率位置（例如`Doppler = 0`），我们会将从`Range = -100`到`Range = 100`范围内所有点的信号强度相加。这个过程在每个多普勒频率位置上都重复进行。\n2. **生成多普勒频谱图（Doppler Spectrum）**：结果是一个一维的图像：横轴是多普勒频率单元（Doppler Bin），纵轴是累积的信号强度（Summed Energy）。这个图像显示了在每个多普勒频率上所有距离上的总信号能量。"},
+		{"id":"b1704cce4a516930","x":400,"y":20,"width":385,"height":249,"color":"1","type":"file","file":"图片/Pasted image 20240909204013.png"}
+	],
+	"edges":[
+		{"id":"1ce7334e2a14f3a4","fromNode":"f0665dfad8ca66d0","fromSide":"bottom","toNode":"773afe2914dc1b6e","toSide":"top"},
+		{"id":"c1fbc34a757e7f76","fromNode":"425888f4dfeaac90","fromSide":"bottom","toNode":"3f55f939518b09f5","toSide":"top"},
+		{"id":"abef3f1f6562fd01","fromNode":"773afe2914dc1b6e","fromSide":"left","toNode":"425888f4dfeaac90","toSide":"top"},
+		{"id":"65b453daf52acb37","fromNode":"425888f4dfeaac90","fromSide":"right","toNode":"1ed0fd131c5a42d5","toSide":"left"},
+		{"id":"bf97e7e3f5cedbba","fromNode":"1ed0fd131c5a42d5","fromSide":"bottom","toNode":"b9f430f9ea61bdfc","toSide":"top"},
+		{"id":"f20079467e123b36","fromNode":"025d29f801972ef3","fromSide":"bottom","toNode":"c06368f612b47191","toSide":"top"},
+		{"id":"d0dfaecb2b4d3d3a","fromNode":"1ed0fd131c5a42d5","fromSide":"right","toNode":"025d29f801972ef3","toSide":"left"},
+		{"id":"350c66051980f31b","fromNode":"025d29f801972ef3","fromSide":"right","toNode":"b1704cce4a516930","toSide":"left"},
+		{"id":"e6192fc5d934ca8e","fromNode":"c06368f612b47191","fromSide":"right","toNode":"b1704cce4a516930","toSide":"bottom"}
+	]
+}
