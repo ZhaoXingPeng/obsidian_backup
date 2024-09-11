@@ -12,15 +12,15 @@
 		{"id":"66b0b5416d66f693","type":"text","text":"要是只是为了HPE，为什么要有骨架重建的步骤，直接由动作标签训练","x":240,"y":-440,"width":380,"height":180},
 		{"id":"31860e2c9b1d4d25","type":"file","file":"图片/Pasted image 20240910163656.png","x":1020,"y":-350,"width":360,"height":531,"color":"#21f505"},
 		{"id":"e65d60691c757f69","type":"file","file":"图片/Pasted image 20240910163746.png","x":1020,"y":188,"width":360,"height":81,"color":"#21f505"},
-		{"id":"7df531255579ef99","type":"file","file":"图片/Pasted image 20240910163811.png","x":1020,"y":280,"width":360,"height":65,"color":"#21f505"},
-		{"id":"49a7c546c506ea93","x":1020,"y":760,"width":514,"height":160,"color":"4","type":"file","file":"图片/Pasted image 20240910202811.png"},
-		{"id":"cf05d947002cee17","x":1020,"y":940,"width":514,"height":236,"color":"4","type":"file","file":"图片/Pasted image 20240910203034.png"},
-		{"id":"b96cbe8b941203ea","x":1020,"y":1200,"width":514,"height":286,"color":"4","type":"file","file":"图片/Pasted image 20240911101918.png"},
-		{"id":"531919b3cfb9c393","x":1020,"y":1500,"width":514,"height":151,"color":"4","type":"file","file":"图片/Pasted image 20240911101942.png"},
-		{"id":"f0fc900ff5f33199","x":1640,"y":920,"width":400,"height":560,"color":"4","type":"text","text":"#### Swin Transformer\nSwin Transformer 在 ViT（Vision Transformer）的基础上进行了创新\n**分层架构**：Swin Transformer 构建了一个分层的特征表示结构。与 ViT 的单一低分辨率特征图不同，Swin Transformer 从较小的图像块开始，通过在更深的层次中逐步合并邻近的图像块，构建了一个多尺度的特征图。\n**基于移动窗口的自注意力机制**：ViT 的自注意力机制是全局的，会计算一个标记与所有其他标记之间的关系，导致计算复杂度随标记数量呈二次增长。Swin Transformer 引入了基于窗口的自注意力计算方法，将图像划分为不重叠的局部窗口，在每个窗口内计算自注意力，这使得计算复杂度相对于输入图像大小为线性。\n**移动窗口机制**：为了解决窗口自注意力模块在窗口之间缺乏连接的问题，Swin Transformer 提出了移动窗口分区的策略。在连续的 Swin Transformer 块之间切换窗口分区配置，使得跨窗口的连接更加有效。"},
+		{"id":"7df531255579ef99","type":"file","file":"图片/Pasted image 20240910163811.png","x":1020,"y":280,"width":358,"height":65,"color":"#21f505"},
+		{"id":"49a7c546c506ea93","type":"file","file":"图片/Pasted image 20240910202811.png","x":1020,"y":760,"width":514,"height":160,"color":"4"},
+		{"id":"cf05d947002cee17","type":"file","file":"图片/Pasted image 20240910203034.png","x":1020,"y":940,"width":514,"height":236,"color":"4"},
+		{"id":"b96cbe8b941203ea","type":"file","file":"图片/Pasted image 20240911101918.png","x":1020,"y":1200,"width":514,"height":286,"color":"4"},
+		{"id":"531919b3cfb9c393","type":"file","file":"图片/Pasted image 20240911101942.png","x":1020,"y":1500,"width":514,"height":151,"color":"4"},
+		{"id":"f0fc900ff5f33199","type":"text","text":"#### Swin Transformer\nSwin Transformer 在 ViT（Vision Transformer）的基础上进行了创新\n**分层架构**：Swin Transformer 构建了一个分层的特征表示结构。与 ViT 的单一低分辨率特征图不同，Swin Transformer 从较小的图像块开始，通过在更深的层次中逐步合并邻近的图像块，构建了一个多尺度的特征图。\n**基于移动窗口的自注意力机制**：ViT 的自注意力机制是全局的，会计算一个标记与所有其他标记之间的关系，导致计算复杂度随标记数量呈二次增长。Swin Transformer 引入了基于窗口的自注意力计算方法，将图像划分为不重叠的局部窗口，在每个窗口内计算自注意力，这使得计算复杂度相对于输入图像大小为线性。\n**移动窗口机制**：为了解决窗口自注意力模块在窗口之间缺乏连接的问题，Swin Transformer 提出了移动窗口分区的策略。在连续的 Swin Transformer 块之间切换窗口分区配置，使得跨窗口的连接更加有效。","x":1640,"y":920,"width":400,"height":560,"color":"4"},
 		{"id":"833cbdffd98b9ca8","type":"text","text":"#### Transformer\n自注意力机制（Self-Attention）：自注意力机制的确是让网络自己学习序列中每个词与其他词的关联强度。查询（Query, Q）、键（Key, K）和值（Value, V）。\n计算相似度分数![[Pasted image 20240910164522.png]]。\n缩放（Scaled Dot-Product Attention）![[Pasted image 20240910164627.png]]。\n多头注意力机制（Multi-Head Attention）：使用多个QKV。\n","x":1470,"y":-259,"width":500,"height":350,"color":"#21f505"},
-		{"id":"4933b0139e9a06d4","x":1020,"y":426,"width":400,"height":218,"color":"4","type":"file","file":"图片/Pasted image 20240910190109.png"},
-		{"id":"a8a7f3e6a2bb0e49","x":1500,"y":345,"width":440,"height":380,"color":"4","type":"text","text":"#### Vit Transformer\n为什么Transformer可以用于图像任务：**将图像视为一系列图块**：与卷积神经网络（CNN）在像素网格上操作不同，ViT将图像看作一系列的图块（patches）。首先将输入图像划分为固定大小的图块，每个图块会被展平（flatten）并通过线性投影映射到一个高维特征空间。为了执行图像分类任务，ViT在输入序列的开头加入一个可学习的分类标记（[CLS] token）。经过Transformer编码器处理后，这个分类标记的输出被用作图像的全局表示。最终使用一个多层感知器（MLP）将其映射到类别空间来预测图像类别。"}
+		{"id":"4933b0139e9a06d4","type":"file","file":"图片/Pasted image 20240910190109.png","x":1020,"y":426,"width":400,"height":218,"color":"4"},
+		{"id":"a8a7f3e6a2bb0e49","type":"text","text":"#### Vit Transformer\n为什么Transformer可以用于图像任务：**将图像视为一系列图块**：与卷积神经网络（CNN）在像素网格上操作不同，ViT将图像看作一系列的图块（patches）。首先将输入图像划分为固定大小的图块，每个图块会被展平（flatten）并通过线性投影映射到一个高维特征空间。为了执行图像分类任务，ViT在输入序列的开头加入一个可学习的分类标记（[CLS] token）。经过Transformer编码器处理后，这个分类标记的输出被用作图像的全局表示。最终使用一个多层感知器（MLP）将其映射到类别空间来预测图像类别。","x":1500,"y":345,"width":440,"height":380,"color":"4"}
 	],
 	"edges":[
 		{"id":"1ce7334e2a14f3a4","fromNode":"f0665dfad8ca66d0","fromSide":"bottom","toNode":"773afe2914dc1b6e","toSide":"top"},
