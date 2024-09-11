@@ -20,7 +20,7 @@
 		{"id":"cf05d947002cee17","x":1020,"y":940,"width":514,"height":236,"color":"4","type":"file","file":"图片/Pasted image 20240910203034.png"},
 		{"id":"b96cbe8b941203ea","x":1020,"y":1200,"width":514,"height":286,"color":"4","type":"file","file":"图片/Pasted image 20240911101918.png"},
 		{"id":"531919b3cfb9c393","x":1020,"y":1500,"width":514,"height":151,"color":"4","type":"file","file":"图片/Pasted image 20240911101942.png"},
-		{"id":"f0fc900ff5f33199","x":1640,"y":980,"width":400,"height":440,"color":"4","type":"text","text":"#### Swin Transformer\n"}
+		{"id":"f0fc900ff5f33199","x":1640,"y":920,"width":400,"height":560,"color":"4","type":"text","text":"#### Swin Transformer\nSwin Transformer 在 ViT（Vision Transformer）的基础上进行了创新\n**分层架构**：Swin Transformer 构建了一个分层的特征表示结构。与 ViT 的单一低分辨率特征图不同，Swin Transformer 从较小的图像块开始，通过在更深的层次中逐步合并邻近的图像块，构建了一个多尺度的特征图。\n**基于移动窗口的自注意力机制**：ViT 的自注意力机制是全局的，会计算一个标记与所有其他标记之间的关系，导致计算复杂度随标记数量呈二次增长。Swin Transformer 引入了基于窗口的自注意力计算方法，将图像划分为不重叠的局部窗口，在每个窗口内计算自注意力，这使得计算复杂度相对于输入图像大小为线性。\n**移动窗口机制**：为了解决窗口自注意力模块在窗口之间缺乏连接的问题，Swin Transformer 提出了移动窗口分区的策略。在连续的 Swin Transformer 块之间切换窗口分区配置，使得跨窗口的连接更加有效。"}
 	],
 	"edges":[
 		{"id":"1ce7334e2a14f3a4","fromNode":"f0665dfad8ca66d0","fromSide":"bottom","toNode":"773afe2914dc1b6e","toSide":"top"},
