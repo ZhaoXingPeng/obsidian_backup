@@ -15,8 +15,8 @@
               "state": {
                 "file": "画板/3 summary.canvas",
                 "viewState": {
-                  "x": -176,
-                  "y": 1011.0625,
+                  "x": -101,
+                  "y": 628.0625,
                   "zoom": 0
                 }
               }
@@ -154,6 +154,7 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "图片/Pasted image 20240911185545.png",
     "图片/Pasted image 20240911185305.png",
     "图片/Pasted image 20240911185225.png",
     "画板/MDST 2D HPE.canvas",
@@ -166,7 +167,6 @@
     "图片/Pasted image 20240910183208.png",
     "图片/Pasted image 20240910164627.png",
     "图片/Pasted image 20240910164522.png",
-    "图片/Pasted image 20240910164453.png",
     "画板/Three-Dim.canvas",
     "画板/SCRP-Radar.canvas",
     "论文笔记/Attention Is All You Need.md",
