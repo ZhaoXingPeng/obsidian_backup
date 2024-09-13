@@ -15,9 +15,9 @@
               "state": {
                 "file": "画板/3 summary.canvas",
                 "viewState": {
-                  "x": 471.4327200236984,
-                  "y": 2965.1939377215704,
-                  "zoom": -1.239480084721707
+                  "x": -158.13752018552844,
+                  "y": 2791.096278411516,
+                  "zoom": -0.2394800847217073
                 }
               }
             }
@@ -154,6 +154,9 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "未命名",
+    "图片/Pasted image 20240913153703.png",
+    "图片/Pasted image 20240913152749.png",
     "图片/Pasted image 20240912204923.png",
     "图片/Pasted image 20240912204118.png",
     "图片/Pasted image 20240912203736.png",
@@ -162,9 +165,6 @@
     "图片/Pasted image 20240912203125.png",
     "图片/Pasted image 20240912202942.png",
     "图片/Pasted image 20240912202627.png",
-    "图片/Pasted image 20240912202425.png",
-    "图片/Pasted image 20240912202040.png",
-    "图片/Pasted image 20240912201914.png",
     "论文笔记/Attention Is All You Need.md",
     "画板/3 summary.canvas",
     "Human Pose Estimation (人体姿态估计)/热图方法.md",
@@ -178,7 +178,6 @@
     "画板/神经网络.canvas",
     "画板/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.p.canvas",
     "未命名.md",
-    "未命名",
     "画板",
     "图片",
     "论文笔记",
