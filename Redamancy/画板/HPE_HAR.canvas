@@ -1,0 +1,34 @@
+{
+	"nodes":[
+		{"id":"e56f9a3597f65ad6","type":"text","text":"HPE","x":680,"y":-380,"width":100,"height":60,"color":"5"},
+		{"id":"05d97c06805a39a7","type":"text","text":"传统Top-Down方法两步走","x":593,"y":-300,"width":275,"height":60,"color":"5"},
+		{"id":"65b8179ed92b5741","type":"file","file":"图片/Pasted image 20240918171415.png","x":466,"y":-200,"width":530,"height":223,"color":"5"},
+		{"id":"984ff481c8df9c08","type":"file","file":"图片/Pasted image 20240918171309.png","x":531,"y":-700,"width":400,"height":271},
+		{"id":"b9e510583b370d91","type":"text","text":"人体姿态估计（Human Pose Estimation，HPE）和人体行为识别（Human Activity Recognition，HAR）","x":780,"y":-1280,"width":848,"height":60,"color":"4"},
+		{"id":"7ce3efa4881c446b","type":"text","text":"- **HPE（人体姿态估计）：** 主要目的是检测和估计图像或视频中人体的姿态，通常以人体各个关节（如肩膀、膝盖、肘部等）的位置为目标。它的输出通常是一组2D或3D的关节点坐标，这些关节信息可以被进一步用于其他任务，如行为识别、动作分析等。\n    - 重点是**关节位置、人体姿势的精确描述**。\n- **HAR（人体行为识别）：** 主要目的是识别和分类人体在特定场景下的行为或活动，如走路、跑步、坐下等。HAR通常基于人体的整体运动模式或一系列时空特征来判断行为。输入可以是原始的视频、从姿态估计中获取的关节信息，或者是其他传感器数据。\n    - 重点是**识别特定的活动模式**，如“这个人正在做什么？”。\n可以这样理解：HPE提取的骨架关键点可以作为HAR行为识别的输入特征之一。HPE通过提取人体的骨架结构（关键点坐标）为HAR提供精确的关节位置信息，这些信息能够帮助HAR更好地识别和分类人体的动作和行为。","x":914,"y":-1160,"width":580,"height":400,"color":"4"},
+		{"id":"5255c198494ef870","type":"text","text":"**两种方法：Top-down vs. Bottom-up**：\n- **Top-down方法**：首先检测图像中的人体框，然后在每个检测到的人体框内进行姿态估计。这种方法依赖人体检测的结果，若多人出现重叠或遮挡，可能会出现丢失目标的情况。同时，该方法计算效率较低，特别是在多人场景中。\n- **Bottom-up方法**：先检测图像中的所有关键点，然后根据连接规则将这些点拼接到相应的人体上。这种方法的挑战在于如何有效地将检测到的关键点正确连接在一起。","x":1040,"y":-260,"width":440,"height":344},
+		{"id":"294d76f0b86c42b4","type":"text","text":"**Part Affinity Fields (PAF)**：\n\n- OpenPose通过一种称为PAF的技术来连接关键点。PAF表示关键点之间的连接向量，通过这些向量判断哪些关键点属于同一个人。\n- 文件解释了PAF标签的定义和使用方式，通过热图和向量预测每个关键点的位置和连接权重，最终进行拼接以形成完整的骨架。","x":1040,"y":120,"width":440,"height":246},
+		{"id":"8471722d0546ddfc","type":"file","file":"图片/point_cloud_animation_batch_1.gif","x":-800,"y":-88,"width":580,"height":435,"color":"5"},
+		{"id":"1ef7ab106601f09f","type":"file","file":"图片/point_cloud_animation_batch_2.gif","x":-800,"y":376,"width":580,"height":435,"color":"5"},
+		{"id":"87f1c61f7025f2a7","type":"file","file":"图片/point_cloud_animation_batch_3.gif","x":-800,"y":852,"width":580,"height":435,"color":"5"},
+		{"id":"7e8148ca0563dff3","type":"text","text":"训练数据","x":-1050,"y":-228,"width":250,"height":60},
+		{"id":"ad604b2f4bb5436e","type":"file","file":"图片/Pasted image 20240918171548.png","x":469,"y":60,"width":527,"height":224,"color":"5"},
+		{"id":"9bde4cbdee5ad226","type":"file","file":"图片/point_cloud_animation_batch_2 1.gif","x":-199,"y":376,"width":580,"height":435},
+		{"id":"044a7cf6b29df805","type":"file","file":"图片/point_cloud_animation_batch_1 1.gif","x":-199,"y":-88,"width":580,"height":435},
+		{"id":"8cda41000897e7a7","type":"file","file":"图片/point_cloud_animation_batch_3 1.gif","x":-199,"y":852,"width":580,"height":435},
+		{"id":"820bc9a1c924922a","type":"file","file":"图片/mri_demo.gif","x":-489,"y":-522,"width":580,"height":322,"color":"5"}
+	],
+	"edges":[
+		{"id":"b576c858853aa7c9","fromNode":"e56f9a3597f65ad6","fromSide":"bottom","toNode":"05d97c06805a39a7","toSide":"top"},
+		{"id":"9959e3defc9f3c84","fromNode":"05d97c06805a39a7","fromSide":"bottom","toNode":"65b8179ed92b5741","toSide":"top"},
+		{"id":"dca908defff16a4a","fromNode":"65b8179ed92b5741","fromSide":"bottom","toNode":"ad604b2f4bb5436e","toSide":"top"},
+		{"id":"7d2526aa163e9459","fromNode":"b9e510583b370d91","fromSide":"bottom","toNode":"7ce3efa4881c446b","toSide":"top"},
+		{"id":"a19a3df86b48972a","fromNode":"5255c198494ef870","fromSide":"bottom","toNode":"294d76f0b86c42b4","toSide":"top"},
+		{"id":"d24fe2719b47d379","fromNode":"820bc9a1c924922a","fromSide":"left","toNode":"8471722d0546ddfc","toSide":"top"},
+		{"id":"e8b403307c22492f","fromNode":"8471722d0546ddfc","fromSide":"bottom","toNode":"1ef7ab106601f09f","toSide":"top"},
+		{"id":"9b6e5f4764accc63","fromNode":"1ef7ab106601f09f","fromSide":"bottom","toNode":"87f1c61f7025f2a7","toSide":"top"},
+		{"id":"0904a8332ede225f","fromNode":"820bc9a1c924922a","fromSide":"right","toNode":"044a7cf6b29df805","toSide":"top"},
+		{"id":"2c7de92241f2e5c3","fromNode":"044a7cf6b29df805","fromSide":"bottom","toNode":"9bde4cbdee5ad226","toSide":"top"},
+		{"id":"a4a1ab0b730b01be","fromNode":"9bde4cbdee5ad226","fromSide":"bottom","toNode":"8cda41000897e7a7","toSide":"top"}
+	]
+}
