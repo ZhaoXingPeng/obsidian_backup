@@ -11,14 +11,11 @@
             "id": "216aaeee596416c9",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "画板/HPE_HAR.canvas",
-                "viewState": {
-                  "x": 289,
-                  "y": 3.5,
-                  "zoom": -1.5655256483198419
-                }
+                "file": "论文笔记/数值分析.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "画板/HPE_HAR.canvas",
+                "file": "论文笔记/数值分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "画板/HPE_HAR.canvas",
+                "file": "论文笔记/数值分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "画板/HPE_HAR.canvas"
+                "file": "论文笔记/数值分析.md"
               }
             }
           }
@@ -152,36 +149,41 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "216aaeee596416c9",
+  "active": "bfd1fc0becd11958",
   "lastOpenFiles": [
-    "画板/HPE 相关.canvas",
-    "画板/Cloud_Point相关.canvas",
+    "论文笔记/数理统计.md",
+    "画板/RadarFormer.canvas",
+    "未命名.md",
+    "论文笔记/英语.md",
+    "论文笔记/数值分析.md",
+    "画板/GAN.canvas",
     "画板/神经网络.canvas",
-    "画板/3 summary.canvas",
-    "图片/mri_demo.gif",
+    "GH/gh_1.canvas",
+    "画板/Three-Dim.canvas",
+    "画板/Transformer.canvas",
+    "画板/3D-Transpose.canvas",
+    "图片/QQ_1730878726292.png",
+    "图片/QQ_1730878304303.png",
+    "图片/QQ_1730878304303 1.png",
+    "图片/Pasted image 20241108172119.png",
+    "图片/Pasted image 20241108172111.png",
+    "图片/Pasted image 20241108172100.png",
+    "图片/Pasted image 20241108172052.png",
+    "图片/Pasted image 20241108172041.png",
+    "图片/Pasted image 20241108171933.png",
+    "图片/Pasted image 20241108172020.png",
+    "GH",
+    "画板/Radar快慢时间.canvas",
     "画板/Radar相关.canvas",
-    "画板/HPE_HAR.canvas",
-    "图片/Pasted image 20240921155656.png",
-    "图片/Pasted image 20240921154650.png",
-    "图片/Pasted image 20240921154147.png",
-    "图片/Pasted image 20240921153539.png",
-    "图片/Pasted image 20240921153437.png",
-    "图片/Pasted image 20240921153401.png",
-    "图片/Pasted image 20240920163528.png",
-    "图片/Pasted image 20240920163332.png",
-    "图片/Pasted image 20240920163313.png",
+    "画板/SCRP-Radar.canvas",
+    "画板/未命名.md",
     "论文笔记/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.md",
     "Human Pose Estimation (人体姿态估计)/热图方法.md",
     "未命名",
     "论文笔记/Attention Is All You Need.md",
-    "画板/MDST 2D HPE.canvas",
     "论文笔记/MDST 2D Human Pose Estimation for SISO UWB Radar based on Micro-Doppler Signature via Cascade and Parallel Swin Transformer.md",
-    "画板/Three-Dim.canvas",
-    "画板/SCRP-Radar.canvas",
     "rs-test-folder-I3CjBnw8pOz7Eoqu2U_Yu",
     "rs-test-folder-42bb18YXreEcPf6CnCt5n",
-    "画板/SCRP-Radar Space-Aware Coordinate Representation for Human Pose Estimation Based on SISO UWB Radar.p.canvas",
-    "未命名.md",
     "画板",
     "图片",
     "论文笔记",

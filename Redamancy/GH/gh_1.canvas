@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"4520138bf43f11e8","x":-40,"y":-240,"width":290,"height":420,"color":"5","type":"group","label":"基本要求"},
+		{"id":"b3017c4b75526f77","x":-320,"y":-220,"width":220,"height":60,"color":"5","type":"text","text":"人工智能的相关内容"},
+		{"id":"7fe58f96fa479d60","x":-320,"y":-110,"width":100,"height":60,"color":"5","type":"text","text":"算法"},
+		{"id":"5c19e0c0a4f01728","x":-20,"y":-220,"width":250,"height":60,"color":"5","type":"text","text":"不是说能完全敲出来，能复现某一个项目，能调试"},
+		{"id":"6febbc60d924492b","x":-320,"y":0,"width":100,"height":60,"color":"5","type":"text","text":"公考"},
+		{"id":"519d25b3eff0df1e","x":-320,"y":100,"width":160,"height":60,"color":"5","type":"text","text":"爱好：虚拟币"},
+		{"id":"03d06af572a04ecb","x":-15,"y":-110,"width":160,"height":60,"color":"5","type":"text","text":"leetcode能刷"},
+		{"id":"cde43ffe3a9b05d2","x":-15,"y":0,"width":140,"height":60,"color":"5","type":"text","text":"把课看完"},
+		{"id":"618374989367491e","x":-15,"y":100,"width":120,"height":60,"color":"5","type":"text","text":"能交易"}
+	],
+	"edges":[]
+}
