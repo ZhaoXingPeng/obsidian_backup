@@ -331,7 +331,7 @@ class PhysicsValidator:
             'ssim': ssim
         }
 ```
-## 5. 应用效果
+## 4. 应用效果
 
 1. **数据质量提升**：
    - 生成的样本更符合物理规律
@@ -341,4 +341,98 @@ class PhysicsValidator:
    - 提高了人类活动识别准确率
    - 更好的特征泛化能力
 
-----
+# physics-aware transformer (PAT)
+以
+
+> Huang Q, Hu M, Brady D J. Array camera image fusion using physics-aware transformers[J]. arxiv preprint arxiv:2207.02250, 2022.
+
+为例
+# 多相机阵列数据融合任务
+
+## 主要目标
+
+- 融合来自不同相机的图像数据
+- 生成一个从选定视角(α视角)的融合结果
+- 处理具有不同特性的相机数据
+# PAT的物理感知实现方法
+
+## 1. 物理感知的注意力引擎
+
+### 核心实现：
+```python
+class PhysicsAwareAttention(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.query_conv = nn.Conv2d(D, D, 1)
+        self.key_conv = nn.Conv2d(D, D, 1)
+        self.value_conv = nn.Conv2d(D, D, 1)
+        
+    def forward(self, alpha_feature, beta_features):
+        # 生成查询特征
+        query = self.query_conv(alpha_feature)  # [αH×αW×D]
+        
+        # 基于物理接收域的特征对齐
+        for beta_feature in beta_features:
+            key = self.key_conv(beta_feature)   # [βH×βW×D]
+            value = self.value_conv(beta_feature)
+            
+            # C3操作：收集、关联、组合
+            collected = self.collect(query, key)
+            correlated = self.correlate(collected)
+            combined = self.combine(correlated, value)
+            
+        return combined
+```
+
+## 2. 物理约束的集成
+
+### 主要物理约束：
+1. 相机内参和外参
+2. 对极几何
+3. 景深
+4. 视差
+
+```python
+class PhysicalConstraints:
+    def __init__(self, camera_params):
+        self.intrinsics = camera_params['intrinsics']
+        self.extrinsics = camera_params['extrinsics']
+        
+    def get_receptive_field(self, alpha_point):
+        # 基于对极几何计算接收域
+        epipolar_line = self.compute_epipolar_line(alpha_point)
+        max_disparity = self.estimate_max_disparity()
+        return self.truncate_field(epipolar_line, max_disparity)
+```
+
+## 3. 物理感知的数据合成
+
+### 实现方式：
+```python
+class PhysicsAwareDataSynthesis:
+    def __init__(self, blender_config):
+        self.camera_array = []
+        self.scene_params = {}
+        
+    def setup_cameras(self):
+        # 设置具有不同物理特性的相机
+        for cam_config in self.camera_configs:
+            camera = Camera(
+                focal_length=cam_config.focal_length,
+                sensor_size=cam_config.sensor_size,
+                pixel_pitch=cam_config.pixel_pitch,
+                resolution=cam_config.resolution
+            )
+            self.camera_array.append(camera)
+    
+    def generate_scene(self):
+        # 生成符合物理规律的场景
+        scene = Scene(
+            meshes=self.create_meshes(),
+            materials=self.setup_materials(),
+            lighting=self.setup_lighting()
+        )
+        return scene.render(self.camera_array)
+```
+
+---
