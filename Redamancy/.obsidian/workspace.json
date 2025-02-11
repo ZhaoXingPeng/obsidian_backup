@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "项目/语音系统（数字人）.md",
+                "file": "数字机器人/语音系统（数字人）.md",
                 "mode": "source",
                 "source": false
               },
@@ -173,9 +173,10 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "论文笔记/问题.md",
+    "数字机器人/语音系统（数字人）.md",
     "论文笔记/PINN.md",
-    "项目/语音系统（数字人）.md",
-    "项目",
+    "数字机器人",
     "图片/Pasted image 20250208221657.png",
     "图片/Pasted image 20250208214432.png",
     "图片/Pasted image 20250208172729.png",
