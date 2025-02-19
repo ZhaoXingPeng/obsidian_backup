@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "项目/语音系统（数字人）.md",
+                "file": "论文笔记/问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "语音系统（数字人） 的反向链接列表"
+              "title": "问题 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "项目/语音系统（数字人）.md",
+                "file": "论文笔记/问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "语音系统（数字人） 的出链列表"
+              "title": "问题 的出链列表"
             }
           },
           {
@@ -151,7 +151,8 @@
               "title": "语音系统（数字人） 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -173,6 +174,12 @@
   },
   "active": "216aaeee596416c9",
   "lastOpenFiles": [
+    "图片/Pasted image 20250219154651.png",
+    "图片/Pasted image 20250219154131.png",
+    "图片/Pasted image 20250219153625.png",
+    "图片/Pasted image 20250219153438.png",
+    "论文笔记/英语.md",
+    "论文笔记/问题.md",
     "论文笔记/PINN.md",
     "图片/Pasted image 20241121203237.png",
     "图片/Pasted image 20241119202719.png",
@@ -181,18 +188,13 @@
     "图片/Pasted image 20241119202232.png",
     "图片/Pasted image 20241119202200.png",
     "图片/Pasted image 20241119201757.png",
-    "图片/Pasted image 20241119201327.png",
     "论文笔记/数值分析.md",
-    "论文笔记/问题.md",
-    "图片/Pasted image 20250213152814.png",
-    "图片/Pasted image 20250213152221.png",
     "数字机器人/语音系统（数字人）.md",
     "数字机器人",
     "画板/Vit.canvas",
     "未命名.md",
     "论文笔记/数理统计.md",
     "画板/RadarFormer.canvas",
-    "论文笔记/英语.md",
     "画板/GAN.canvas",
     "画板/神经网络.canvas",
     "GH/gh_1.canvas",
